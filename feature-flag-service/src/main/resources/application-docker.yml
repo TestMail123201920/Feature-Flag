@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/featureflag
+    username: ${DB_USERNAME:featureflag}
+    password: ${DB_PASSWORD}
+
+  data:
+    redis:
+      host: redis
+      port: 6379
+
+  kafka:
+    bootstrap-servers: kafka:9092
+
+logging:
+  level:
+    com.company.featureflag: INFO
