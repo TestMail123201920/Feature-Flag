@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+feature-flag:
+  service-url: ${FEATURE_FLAG_SERVICE_URL:http://localhost:8080}
+  refresh-interval: 30s
+  connect-timeout: 2s
+  read-timeout: 2s
+  fallback-enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus
